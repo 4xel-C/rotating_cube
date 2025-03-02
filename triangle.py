@@ -89,13 +89,9 @@ while True:
 
     # calculate all the surface points of the cube; iterate through his width. Fix one dimension to draw the 6 faces.
     for cubeX in range(-cubeWidth, cubeWidth, resolution):
-        for cubeY in range(-cubeWidth, cubeWidth, resolution):
-            calculateForSurface(cubeX, cubeY, -cubeWidth, "@")
-            calculateForSurface(cubeWidth, cubeY, cubeX, "$")
-            calculateForSurface(-cubeWidth, cubeY, -cubeX, "~")
-            calculateForSurface(-cubeX, cubeY, cubeWidth, "#")
-            calculateForSurface(cubeX, -cubeWidth, -cubeY, ";")
-            calculateForSurface(cubeX, cubeWidth, cubeY, "+")
+        for cubeY in range(-cubeWidth, cubeX, resolution):
+            calculateForSurface(cubeX, cubeY, 0, "@")
+
 
     # replace the cursor to the beginning of the terminal, avoid clearing the whole terminal (more fluid)
     print("\x1b[H", end="")
