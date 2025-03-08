@@ -108,7 +108,7 @@ while True:
         print(buffer[k], end="")
 
     # increment the rotation angle (determine speed and fluidity)
-    A += 0.05
-    B += 0.05
-    C += 0.01
-    time.sleep(0.016)
+    A += 0.03
+    B += 0.03
+    C += 0.005
+    # time.sleep(0.016)
